@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "893713400043",
+    "firebase_url": "https://audiocommentary-161415.firebaseio.com",
+    "project_id": "audiocommentary-161415",
+    "storage_bucket": "audiocommentary-161415.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893713400043:android:2da878be6c55eb71",
+        "android_client_info": {
+          "package_name": "com.ucl_finalproject.audiocommentary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893713400043-3kl7jr4g49qrs8pttpl11argf010b9pe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ucl_finalproject.audiocommentary",
+            "certificate_hash": "fcfcd7f5fc7f81cb958702b799dd3da53e116dbd"
+          }
+        },
+        {
+          "client_id": "893713400043-9ndods6t5hhj13hjob0o2ahou1q2tg64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4RQ7rDsBop89epyQ-_cp34nUEC23Iees"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

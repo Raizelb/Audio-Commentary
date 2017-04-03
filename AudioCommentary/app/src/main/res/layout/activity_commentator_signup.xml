@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team you support"
+        android:id="@+id/supported_team_textview"/>
+    <Spinner
+        android:id="@+id/supported_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/supported_team_textview">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/commentator_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/supported_team_textview"
+        android:hint="Please enter a small description about yourself"/>
+    <Button
+        android:id="@+id/commentator_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Audio Commentary</string>
+    <string name="spinner_title">Example</string>
+    <string name="btn_link_to_register">No account yet? Create one</string>
+    <string name="btn_link_to_login">Already a member? Login</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_stream">Stream</string>
+    <string name="nav_chat">Chat</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Settings</item>
+        <item>Stream</item>
+        <item>Chat</item>
+    </string-array>
+
+    <!-- Premier League Teams -->
+    <string-array name="premier_league">
+        <item>Arsenal</item>
+        <item>AFC Bournemouth</item>
+        <item>Burnley</item>
+        <item>Chelsea</item>
+        <item>Crystal Palace</item>
+        <item>Everton</item>
+        <item>Hull City</item>
+        <item>Leicester City</item>
+        <item>Liverpool</item>
+        <item>Manchester City</item>
+        <item>Manchester United</item>
+        <item>Middlesbrough</item>
+        <item>Southampton</item>
+        <item>Stoke City</item>
+        <item>Sunderland</item>
+        <item>Swansea City</item>
+        <item>Tottenham Hotspur</item>
+        <item>Watford</item>
+        <item>West Bromwich Albion</item>
+        <item>West Ham United</item>
+    </string-array>
+    
+    <!-- Premier League Stadiums -->
+    <string-array name="premier_league_stadiums">
+        <item>Highbury House, 75 Drayton Park, London, N5 1BU</item>
+        <item>Vitality Stadium, Dean Court, Bournemouth, BH7 7AF</item>
+        <item>Turf Moor, Harry Potts Way, Burnley, Lancashire, BB10 4BX</item>
+        <item>Stamford Bridge, Fulham Road, London, SW6 1HS</item>
+        <item>Selhurst Park Stadium, Holmesdale Road, London, SE25 6PU</item>
+        <item>Goodison Park, Goodison Road, Liverpool, L4 4EL</item>
+        <item>The KCOM Stadium, West Park, Hull, HU3 6HU</item>
+        <item>King Power Stadium, Filbert Way, Leicester, LE2 7FL</item>
+        <item>Anfield, Anfield Road, Liverpool, L4 0TH</item>
+        <item>Etihad Stadium, Etihad Campus, Manchester, M11 3FF</item>
+        <item>Sir Matt Busby Way, Old Trafford, Manchester, M16 0RA</item>
+        <item>Riverside Stadium, Middlesbrough, TS3 6RS</item>
+        <item>St Mary\'s Stadium, Britannia Road, Southampton, SO14 5FP</item>
+        <item>bet365 Stadium, Stanley Matthews Way, Stoke-on-Trent, ST4 4EG</item>
+        <item>Stadium of Light, Sunderland, SR5 1SU</item>
+        <item>Liberty Stadium, Landore, Swansea, SA1 2FA</item>
+        <item>Lilywhite House, 782 High Road, Tottenham, London, N17 0BX</item>
+        <item>Vicarage Road Stadium, Watford, Hertfordshire, WD18 0E</item>
+        <item>The Hawthorns, West Bromwich, West Midlands, B71 4LF</item>
+        <item>London Stadium, Queen Elizabeth Olympic Park, London, E20 2ST</item>
+    </string-array>
+
+
+
+    <string name="search_title">Search</string>
+    <string name="stream_btn">Stream</string>
+    <string name="chat_btn">Enter Chat Room</string>
+    <string name="commentator_status">Commentator Status</string>
+    <string name="user_commentator_status">Ready</string>
+    <string name="commentator_signup">Sign up</string>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+</resources>

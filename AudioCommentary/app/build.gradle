@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.ucl_finalproject.audiocommentary"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    preBuild.doFirst {
+        if (!file("./libs/com.wowza.gocoder.sdk.aar").exists()) {
+            //throw new BuildCancelledException("*** The GoCoder SDK library could not be found in the 'app/libs' folder.\n*** You may be attempting to build one of the SDK sample apps downloaded from GitHub which do not include the SDK library.\n*** Please visit https://www.wowza.com/products/gocoder/sdk to contact the SDK team for licensing and trial request information.")
+        }
+    }
+}
+
+// This enables Gradle to locate Android library dependencies in the
+// same manner as jar-based dependencies
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    maven { url 'https://maven.fabric.io/public' }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // Google Play Services Library (in particular "play-services-auth")
+    compile "com.google.android.gms:play-services:10.2.0"
+
+    // Google Firebase Library
+    compile "com.google.firebase:firebase-core:10.2.0"
+    //compile 'com.android.support:design:23.4.0'
+    compile 'com.firebaseui:firebase-ui:1.2.0'
+
+    // The GoCoder SDK library dependency declaration
+    compile 'com.wowza.gocoder.sdk.android:com.wowza.gocoder.sdk:1.0@aar'
+
+    //JWplayer
+    compile 'com.longtailvideo.jwplayer:jwplayer-core:+'
+    compile 'com.longtailvideo.jwplayer:jwplayer-common:+'
+    compile 'com.longtailvideo.jwplayer:jwplayer-ima:+'        // Only required if using IMA features
+    compile 'com.longtailvideo.jwplayer:jwplayer-chromecast:+' // Only required if using Chromecast
+
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    // Retrofit & OkHttp
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+
+    testCompile 'junit:junit:4.12'
+}
+
+// ADD THIS AT THE BOTTOM
+apply plugin: 'com.google.gms.google-services'

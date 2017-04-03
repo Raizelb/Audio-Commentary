@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ucl_finalproject.audiocommentary.fragment.SettingsFragment">
+
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/commentator_status"/>
+
+    <TextView
+        android:id="@+id/user_commentator_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="250dp"
+        android:text="@string/user_commentator_status"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/commentator_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="250dp"
+        android:text="@string/commentator_signup"
+        android:visibility="invisible"/>
+
+</FrameLayout>
