@@ -71,18 +71,28 @@ Contents
 	\item [4] Design and Implementation
 	\begin{itemize}
 		\item [4.1] System Architecture
-		\item [4.2] Application Components
+		\item [4.2] Data Flow Diagram
+		\item [4.3] Application Components
 		\begin{itemize}
-			\item [4.2.1] Broadcasting to Streaming Server
-			\item [4.2.2] Database
+			\item [4.3.1] Broadcasting to Streaming Server
 			\begin{itemize}
-				\item [4.2.2.1] Structure
-				\item [4.2.2.2] Implementation
+				\item [4.3.1.1] Audio Sampling Rate
 			\end{itemize}
-			\item [4.2.3] GPS locations
-			\item [4.2.4] Listen to Streams
-			\item [4.2.5] Live Chat
-			\item [4.2.6] User Interface
+			\item [4.3.2] Database
+			\begin{itemize}
+				\item [4.3.2.1] Structure
+				\item [4.3.2.2] Implementation
+			\end{itemize}
+			\item [4.3.3] Location Service
+			\item [4.3.4] Connecting to Server Side
+		\end{itemize}
+		\item [4.4] Server Components
+		\begin{itemize}
+			\item [4.4.1] Server Database
+			\begin{itemize}
+				\item [4.4.1.1] Structure
+				\item [4.4.1.2] Implementation
+			\end{itemize}
 		\end{itemize}
 	\end{itemize}
 	\item [5] Testing
@@ -322,10 +332,97 @@ So just any other streaming applications, the system is divided into two main co
 	\caption{System Architecture}
 	\label{fig:system-architecture}
 \end{figure}
-{\Large 4.2 Application Components}
+{\Large 4.2 Data Flow Diagram}\\
+As the application aims to provide users streaming services, understanding of data flow and different components within the streaming cloud are also quite crucial when designing the system.\\
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=14cm]{data-flow-diagram}
+	\caption{Data Flow Diagram}
+	\label{fig:data-flow-diagram}
+\end{figure}
+So the application will send only a single bitrate stream to the channel which can take multiple stream sources at once but can cause congestion. The transcoder is a part of the channel which generates adaptive bitrate passthrough streams and send to specific targets including Facebook Live. This is extended functionality to allow more scalable broadcasts to certain regions or audiences without having geo-blocked channels. Wowza offers two different playback options, Adobe HDS only works with flashplayer which is not supported by Android. Apple HLS is the ideal choice for the system because it is widely supported by a range of different media players available on Android.\\
+{\Large 4.3 Application Components}\\
 This section will be describing the design of smaller components that make up the Android application.\\
-{\large 4.2.1 Broadcasting to Streaming Server}\\
-The application relies entirely on Wowza GoCoder SDK to handle the connection to Wowza Streaming Cloud by implementing the \textit{WZStatusCallBack} interface. The workflow is quite simple, firstly initialise a \textit{WowzaGoCoder} (the top level GoCoder API interface) object by giving it a valid Wowza GoCoder SDK key. After that, create an \textit{WZBroadcast} (The broadcaster instance) object along with an \textit{WZBroadcastConfig} (where all credentials to connect to Wowza Streaming Cloud is set, these information are available on user's Wowza Streaming channel) object. Next, 
+{\large 4.3.1 Broadcasting to Streaming Server}\\
+The application relies entirely on Wowza GoCoder SDK to handle the connection to Wowza Streaming Cloud by implementing the \textit{WZStatusCallBack} interface. The workflow is quite simple, it follows a set of procedures to initialise required objects, Below is an overview of the set of functions:
+\begin{itemize}
+	\item \textbf{initialise()}: This method is self-explanatory, it initialises all required objects. Firstly, it creates a \textit{WowzaGoCoder} (the top level GoCoder API interface) object by giving it a valid Wowza GoCoder SDK key. After that, create an \textit{WZBroadcast} (The broadcaster instance) object along with an \textit{WZBroadcastConfig} (where all credentials to connect to Wowza Streaming Cloud is set, these information are available on user's Wowza Streaming channel) object. Finally an \textit{WZAudioDevice} object that creates an \textit{AudioRecord} instance to record media, which is set to 44.1 kHz sampling rate by default and set to the highest sample rate if the default is not supported, more on this will be available on subsequent section.\\
+	\item \textbf{onWZError()}: This method reports any error caused the GoCoder SDK like invalid SDK key.\\
+	\item \textbf{onWZStatus()}: This method reports back the status of connection between the device and Wowza Streaming Cloud.\\
+\end{itemize} 
+\textbf {4.3.1.1 Audio Sampling Rate}\\
+Sample rate is the number of samples of audio carried per second measured in Hz or kHz, generally the higher the sample rate the better the quality of audio produced.\textsuperscript{11}. Android's support for audio sample rates varies greatly from device to device and there's also the compromise between size and quality:\\
+\begin{itemize}
+	\item 48,000 Hz: Used for DVDs and normally is the maximum sample rate supported by Android devices.\\
+	\item 44,100 Hz: The sampling rate of audio CDs which reproduce the maximum frequencies of 20,000 Hz, average humans can't really distinguish frequency above 16,000 Hz and only very small portions can hear above 20,000 Hz. Furthermore, this sample rate is supposed to be the only rate that is guaranteed to work across all devices according to Android documents\textsuperscript{12}. However, even though the sample rate is widely supported, it is not guaranteed to work on every single device i.e. Samsung Note 4 doesn't seem to support it. Another reason for using this sample rate as the default is its size, 10 minutes of streaming at 44100 Hz totalled at around 700 KB or only 7 MB for a full football match, while the output is often 10 times this amount so probably there was some sort of encryption involved in the process.\\
+	\item 22,050 Hz: reasonably popular for low bit rate MP3s,  often used in: AM radio or situations where perceived quality is unimportant but clarity must be maintained.
+	\item 11,025 Hz: Very poor sound quality and can be found in WAV files.
+	\item 8,000 Hz: Telephone transmission as it is a good trade-off between quality and bandwidth due to limited bandwidth.
+\end{itemize}
+{\large 4.3.2 Database}\\
+{\textbf {4.3.2.1 Structure}}\\
+Due to the nature of the application, data is expired quite quickly, so having a confisticated in-app database is unfit in this situation. However, immutable data used to identify the user should still be stored to avoid unnecessary requests to the server.\\
+\textit{user}\\
+\begin{tabular}{| c | c | c | c | c |}
+\hline
+uid (PK) & name & email & commentator & created\_at\\
+\hline
+\end{tabular}\\
+These data is used by the application to identify the user, "commentator" column is used to identify the user's commentator status to check if user has rights to broadcast.\\
+{\textbf {4.3.2.2 Implementation}}\\
+SQLite Database is a library supported by Android, that implements a server-less, zero-configuration SQL engine database. More specifically, SQLite reads and writes directly to disk files hence requires no server and doesn't require installation, while being quite compact at the same time, library can take up as little space as 500 KB with all features enabled. Furthermore, SQLite is cross-platform and so can be copied directly to different platforms\textsuperscript{13}.\\
+The application interacts with the database via a helper class named \textit{SQLiteHandler} that extends \textit{SQLiteOpenHelper} an abstract class that manages database creation and version control. This class contains:
+\begin{itemize}
+	\item \textbf{onCreate()}: The method is called when database is created the first time, \textit{user} table is created in this method.\\
+	\item \textbf{onUpdate()}: typically used for version control, when there's a change to the structure of the table, old \textit{user} table is dropped and it calls \textbf{onCreate()} method to create the new table.\\
+	\item \textbf{addUser()}: Quite self-explanatory, this method is used to store user details in the database, the method is called every time the user logs in.\\
+	\item \textbf{getUserDetails()}: Fetch user details from the database into a hashmap object and return it.
+	\item \textbf{deleteUsers()}: this method calls \textbf{getWritableDatabase()} and delete all entries in the table. This method will be called every time user logs out, so at any instance of time, at max only one user is stored in the database, this helps to simplify system while preventing user details from getting stolen.\\
+\end{itemize}
+{\large 4.3.3 Location Service}\\
+The application uses users' locations to determine whether the user is actually winthin the radius of the stadium when preparing to broadcast. More specifically, users should be within 200 meters (Emirates Stadium is around 17 acres, so this is a reasonable threshold) of the stadium. This is put into place as a measure to prevent users from broadcasting irrelevant contents. Since this is the only purpose of getting users' locations, the application will only check this once because listening to location changes is an intensive process and will waste a lot of battery taking in mind, users will also be broadcasting at the same time. The \textit{LocationService} gets users' whereabouts by implementing \textit{LocationListener} interface that is used for receiving notifications from \textit{LocationManager} when location has changed.\\
+On Android, there are two location providers: GPS and Network, each has its own good and bad points.\\
+\begin{itemize}
+	\item GPS: more accurate but only works outdoors and doesn't respond very fast while consuming more battery.
+	\item Network: Determines locations using cellular and wifi signals so it's not as accurate GPS but responds faster, works both indoors and outdoors and also doesn't consume as much battery.
+\end{itemize}
+The application makes use of both providers, since both speed and accuracy are wanted but not essential. The \textit{getLastBestLocation()} get both locations and compare their times, the newer one is returned.\\
+{\large 4.3.4 Connecting to Server Side}\\
+The application uses Retrofit to manage transactions between device and the server side which is used thoughout the application, typically functionalities that required interactions with the server side database. Each Retrofit instace is created by caling the \textit{ServiceGenerator} class, the \textit{Datanase} interface is created to contain all the model POST requests (parameters they take, lniks to scripts they call etc.). Retrofit allows both asynchronous and synchronous requests, but since synchronous calls are executed on the main thread therefore UI blocks during request execution reduces application's reponsiveness so in the application all requests are asynchronous. Whether asynchronous and synchronous, they both follow a certain procedure, for our application, a \textit{Database} instance is created by calling \textit{ServiceGenerator} to create a Retrofit instance and call \textit{create(Database.class)} on that instance. After that, the application simply calls the required method from the interface and call \textit{enqueue} to make a request on background thread. In order to get the response, the application simple calls \textit{response.body()} on \textit{onResponse()} method if the request is successful or handle the error on \textit{onFailure()} in case the request was unsuccessful.\\
+{\Large 4.4 Application Components}\\
+{\large 4.4.1 Server Database}\\
+{\textbf 4.4.1.1 Structure}\\
+Database normalisation has been performed to reduce data redundancy and improve data integrity to minimise potential errors occurs when inserting, updating or deleting data.\\
+\begin{itemize}
+	\item \textbf{1st Normal Form}: Database contains only atomic values and there are no repeating groups\textsuperscript{14}.
+	\item \textbf{2nd Normal Form}: To satisfy this, database must be in first normal form and all non-key attributes are dependent on the primary key.
+	\item \textbf{3rd Normal Form}: Database is in second normal form and there are no transistive functional dependency i.e. an attribute is dependent on another non-primary key attribute which in turns is dependent on the primary key.
+\end{itemize}
+\textit{users}
+\begin{tabular}{| c | c | c | c | c | c | c |}
+\hline
+user\_id (PK) & name & email & commentator\_status & encrypted\_password & salt & created\_at\\
+\hline
+\end{tabular}
+\textit{commentators}\\
+\begin{tabular}{| c | c | c | c |}
+\hline
+user\_id (PK) & team\_support & description & rating\\
+\hline
+\end{tabular}\\
+\textit{comments}
+\begin{tabular}{| c | c | c | c | c |}
+\hline
+comment\_id (PK) & user\_id (FK) & comment\_content & comment\_rating & comment\_date\\
+\hline
+\end{tabular}
+{\textbf 4.4.1.2 Implementation}\\
+All interactions with the database use prepared statements\textsuperscript{15} which are very useful against SQL injections. The prepared works as follows:
+\begin{itemize}
+	\item \textit{prepare()}: Create an SQL statement template without specified values which is sent to the database for syntax checks and initialises resources for later use.
+	\item \textit{execute()}: The client binds parameter values using \textit{bind_param()} and calls \textit{execute()} to send it to the database (since values are sent seperately from query, it cannot interfere with it hence useful against SQL injections) which will create a statement from the template with bound values and execute it.
+\end{itemize}
+There are multiple benefits for using prepared statements besides the fact that they are useful against SQL injections. Firstly, these statements can be executed repeatedly with different values by changing the bound variable. Another benefit is that it cuts out parsing and validation which makes it runs faster.\\
 {\huge References}\\[0.5cm]
 \textsuperscript{1}"Android Developers". Developer.android.com. N.p., 2007. Web. 15 Mar. 2017.\\
 \textsuperscript{2}Tamada, Ravi and Ravi Tamada. "Android Login And Registration With PHP, Mysql And Sqlite". androidhive. N.p., 2016. Web. 16 Mar. 2017.\\
@@ -335,7 +432,12 @@ The application relies entirely on Wowza GoCoder SDK to handle the connection to
 \textsuperscript{6}"Stack Overflow". Stackoverflow.com. N.p., 2008. Web. 16 Mar. 2017.\\
 \textsuperscript{7}Mobdro. Mobdro, 2016. Print.\\
 \textsuperscript{8}Ustream. Ustream an IBM Company, 2016. Print.\\
-\textsuperscript{9}10. UK TVNow. UKTVNow; 2015. \\
-\textsuperscript{10}1. Beal V. What is Entity Relationship Diagram? Webopedia Definition [Internet]. Webopedia. 2017 [cited 14 April 2017]. Available from: \url {http://www.webopedia.com/TERM/E/entity_relationship_diagram.html}\\
+\textsuperscript{9}UK TVNow. UKTVNow; 2015. \\
+\textsuperscript{10}Beal V. What is Entity Relationship Diagram? Webopedia Definition [Internet]. Webopedia. 2017 [cited 14 April 2017]. Available from: \url {http://www.webopedia.com/TERM/E/entity_relationship_diagram.html}\\
+\textsuperscript{11}Sample Rates - Audacity Wiki [Internet]. Wiki.audacityteam.org. 2016 [cited 16 April 2017]. Available from: \url{http://wiki.audacityteam.org/wiki/Sample_Rates}\\
+\textsuperscript{12}AudioRecord | Android Developers [Internet]. Developer.android.com. 2017 [cited 16 April 2017]. Available from: \url{https://developer.android.com/reference/android/media/AudioRecord.html}\\
+\textsuperscript{13}About SQLite [Internet]. Sqlite.org. 2017 [cited 17 April 2017]. Available from: \url{https://www.sqlite.org/about.html}\\
+\textsuperscript{14}Database Normalization [Internet]. 1keydata.com. 2015 [cited 18 April 2017]. Available from: \url{http://www.1keydata.com/database-normalization/}\\
+\textsuperscript{15}PHP Prepared Statements [Internet]. W3schools.com. 2017 [cited 18 April 2017]. Available from: \url{https://www.w3schools.com/php/php_mysql_prepared_statements.asp}\\
 \end{flushleft}
 \end{document}
