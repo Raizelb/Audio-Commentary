@@ -420,7 +420,7 @@ comment\_id (PK) & user\_id (FK) & comment\_content & comment\_rating & comment\
 All interactions with the database use prepared statements\textsuperscript{15} which are very useful against SQL injections. The prepared works as follows:
 \begin{itemize}
 	\item \textit{prepare()}: Create an SQL statement template without specified values which is sent to the database for syntax checks and initialises resources for later use.
-	\item \textit{execute()}: The client binds parameter values using \textit{bind_param()} and calls \textit{execute()} to send it to the database (since values are sent seperately from query, it cannot interfere with it hence useful against SQL injections) which will create a statement from the template with bound values and execute it.
+	\item \textit{execute()}: The client binds parameter values using \textit{bind\_param()} and calls \textit{execute()} to send it to the database (since values are sent seperately from query, it cannot interfere with the query which prevents SQL injections) which will create a statement from the template with bound values and execute it.
 \end{itemize}
 There are multiple benefits for using prepared statements besides the fact that they are useful against SQL injections. Firstly, these statements can be executed repeatedly with different values by changing the bound variable. Another benefit is that it cuts out parsing and validation which makes it runs faster.\\
 {\huge References}\\[0.5cm]
