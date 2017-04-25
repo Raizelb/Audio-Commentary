@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.2.19)  18 APR 2017 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.2.19)  25 APR 2017 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,27 +162,182 @@ File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 10.
+(c:/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count98
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(c:/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip44
+\LTright=\skip45
+\LTpre=\skip46
+\LTpost=\skip47
+\LTchunksize=\count99
+\LTcapwidth=\dimen109
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count100
+\LT@rows=\count101
+\c@LT@tables=\count102
+\c@LT@chunks=\count103
+\LT@p@ftn=\toks17
+)
+(c:/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/01/24 v2.0c Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-(./FinalReport.aux)
+(c:/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(c:/texlive/2016/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen110
+\WF@size=\dimen111
+\c@WF@wrappedlines=\count104
+\WF@box=\box32
+\WF@everypar=\toks18
+Package: wrapfig 2003/01/31  v 3.6
+)
+(c:/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count105
+\lst@gtempboxa=\box33
+\lst@token=\toks19
+\lst@length=\count106
+\lst@currlwidth=\dimen112
+\lst@column=\count107
+\lst@pos=\count108
+\lst@lostspace=\dimen113
+\lst@width=\dimen114
+\lst@newlines=\count109
+\lst@lineno=\count110
+\lst@maxwidth=\dimen115
+
+(c:/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count111
+\lst@skipnumbers=\count112
+\lst@framebox=\box34
+)
+(c:/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(c:/texlive/2016/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 16.
+ (./FinalReport.aux)
 \openout1 = `FinalReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-\AtBeginShipoutBox=\box26
- (c:/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 20.
+(c:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 20.
+\AtBeginShipoutBox=\box35
+
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
 (c:/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -190,7 +345,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 13.
+Package hyperref Info: Link coloring ON on input line 20.
 
 (c:/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -198,11 +353,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count98
+\c@section@level=\count113
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
 
 (./FinalReport.out) (./FinalReport.out)
 \@outlinefile=\write3
@@ -211,17 +366,17 @@ LaTeX Info: Redefining \nameref on input line 13.
 
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count99
-\scratchdimen=\dimen109
-\scratchbox=\box27
-\nofMPsegments=\count100
-\nofMParguments=\count101
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count102
-\MPscratchDim=\dimen110
-\MPnumerator=\count103
-\makeMPintoPDFobject=\count104
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count114
+\scratchdimen=\dimen116
+\scratchbox=\box36
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen117
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks21
 ) (c:/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -238,181 +393,808 @@ G,.JBIG2,.JB2,.eps]
 (c:/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-)) [1
+))
+\c@lstlisting=\count120
+ [1
 
-{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 142.
+{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
+ []
+
+[2] [3] [4] [5] [6]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+ [7]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 177.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 177.
+ [8]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 178.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 178.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 178.
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ” in font cmr12!
+ [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+[]\OT1/cmr/m/n/10 Operating
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+[]\OT1/cmr/m/n/10 Operating
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 237--238
+[]\OT1/cmr/m/n/10 Interaction be-tween users are only vi-able when
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
+[]\OT1/cmr/m/n/10 Operating
+ []
+
+[12] [13] [14] [15]
+Underfull \hbox (badness 1337) in paragraph at lines 294--294
+[]|\OT1/cmr/m/n/10 The app shall use user's reg-is-tered
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+[]|\OT1/cmr/m/n/10 Non-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+[]|\OT1/cmr/m/n/10 Compliance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
+[]|\OT1/cmr/m/n/10 Non-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+[]|\OT1/cmr/m/n/10 Non-
+ []
+
+
+Overfull \hbox (56.43303pt too wide) in alignment at lines 284--324
+ [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 324
+ []
+
+[16] <images/use-case-diagram.png, id=80, 601.19606pt x 527.11931pt>
+File: images/use-case-diagram.png Graphic file (type png)
+
+<use images/use-case-diagram.png>
+Package pdftex.def Info: images/use-case-diagram.png used on input line 330.
+(pdftex.def)             Requested size: 398.33858pt x 349.25911pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 330--331
+ [][] 
+ []
+
+[17] [18pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.340 ...entities involved in the application.\par
+                                                   <./images/use-case-diagram.p
+ng>] <images/er-diagram.png, id=90, 361.35pt x 265.59225pt>
+File: images/er-diagram.png Graphic file (type png)
+
+<use images/er-diagram.png>
+Package pdftex.def Info: images/er-diagram.png used on input line 343.
+(pdftex.def)             Requested size: 398.33858pt x 292.7805pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 343--344
+ [][] 
+ []
+
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.349 ...to provide users a smooth experience.\par
+                                                   <./images/er-diagram.png>]
+<images/system-architecture.png, id=99, 605.26125pt x 572.28806pt>
+File: images/system-architecture.png Graphic file (type png)
+
+<use images/system-architecture.png>
+Package pdftex.def Info: images/system-architecture.png used on input line 353.
+
+(pdftex.def)             Requested size: 384.1122pt x 363.1893pt.
+
+Overfull \hbox (39.1122pt too wide) in paragraph at lines 353--354
+ [][] 
+ []
+
+[20] <images/data-flow-diagram.png, id=106, 794.97pt x 496.85625pt>
+File: images/data-flow-diagram.png Graphic file (type png)
+
+<use images/data-flow-diagram.png>
+Package pdftex.def Info: images/data-flow-diagram.png used on input line 361.
+(pdftex.def)             Requested size: 398.33858pt x 248.96579pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 361--362
+ [][] 
+ []
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.365 S
+       o the application will send only a single bitrate stream to the chann...
+ <./images/system-architecture.png>] [22pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.370 \begin{itemize}
+                      <./images/data-flow-diagram.png>] [23] [24] [25] [26]
+[27]
+Overfull \hbox (74.84512pt too wide) in paragraph at lines 437--443
+[] 
+ []
+
+
+Overfull \hbox (54.7785pt too wide) in paragraph at lines 449--454
+[]  
+ []
+
+[28] [29] <images/load-comments.png, id=146, 337.26pt x 410.13225pt>
+File: images/load-comments.png Graphic file (type png)
+
+<use images/load-comments.png>
+Package pdftex.def Info: images/load-comments.png used on input line 472.
+(pdftex.def)             Requested size: 233.9756pt x 284.52756pt.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.476 ...same layout structure and principles.\par
+                                                   <./images/load-comments.png>
+] [31] [32] [33] [34] [35]
+Overfull \hbox (78.50078pt too wide) in alignment at lines 518--548
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 548
+ []
+
+
+Overfull \hbox (78.50078pt too wide) in alignment at lines 548--549
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 578
+ []
+
+[36]
+Underfull \vbox (badness 10000) detected at line 607
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \vbox (badness 10000) detected at line 636
+ []
+
+[37]
+Underfull \vbox (badness 10000) detected at line 665
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 696
+ []
+
+[38]
+Underfull \vbox (badness 10000) detected at line 727
+ []
+
+[39]
+Underfull \vbox (badness 10000) detected at line 756
+ []
+
+
+Overfull \hbox (28.72289pt too wide) in alignment at lines 767--795
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 795
+ []
+
+[40]
+Underfull \vbox (badness 10000) detected at line 824
+ []
+
+
+Overfull \hbox (61.7646pt too wide) in alignment at lines 825--853
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 853
+ []
+
+[41]
+Underfull \vbox (badness 10000) detected at line 882
+ []
+
+
+Overfull \hbox (25.19507pt too wide) in alignment at lines 883--913
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 913
+ []
+
+
+Overfull \hbox (25.19507pt too wide) in alignment at lines 913--914
+[] 
+ []
+
+[42]
+Underfull \vbox (badness 10000) detected at line 943
+ []
+
+[43]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Overfull \hbox (31.08403pt too wide) in alignment at lines 944--972
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 972
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Overfull \hbox (31.08403pt too wide) in alignment at lines 972--980
+[] 
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \vbox (badness 10000) detected at line 1009
+ []
+
+[44]
+Underfull \vbox (badness 10000) detected at line 1038
+ []
+
+
+Overfull \hbox (91.33345pt too wide) in alignment at lines 1041--1079
+[] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1079
+ []
+
+[45]
+Overfull \hbox (56.98886pt too wide) in alignment at lines 1081--1105
+[] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1105
+ []
+
+[46]
+Overfull \hbox (1.41243pt too wide) in paragraph at lines 1111--1111
+[]|\OT1/cmr/m/n/10 Activity| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1111--1111
+[]|\OT1/cmr/m/n/10 Event
+ []
+
+
+Overfull \hbox (4.32513pt too wide) in paragraph at lines 1111--1111
+\OT1/cmr/m/n/10 (/2000)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
+[]|\OT1/cmr/m/n/10 Main-
+ []
+
+
+Overfull \hbox (1.41243pt too wide) in paragraph at lines 1113--1113
+\OT1/cmr/m/n/10 Activity| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
+[]|\OT1/cmr/m/n/10 ActivityNot-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
+\OT1/cmr/m/n/10 Found-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
+\OT1/cmr/m/n/10 Exception:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
+\OT1/cmr/m/n/10 Un-able to
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 1113--1113
+\OT1/cmr/m/n/10 find ex-plicit
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 1113--1113
+[]|\OT1/cmr/m/n/10 Due to Pri-va-cy-Pol-i-cy-Ac-tiv-ity
+ []
+
+
+Overfull \hbox (4.96793pt too wide) in paragraph at lines 1115--1115
+[]|\OT1/cmr/m/n/10 Register-
+ []
+
+
+Overfull \hbox (1.41243pt too wide) in paragraph at lines 1115--1115
+\OT1/cmr/m/n/10 Activity| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1115
+[]|\OT1/cmr/m/n/10 NullPointer-
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 1115--1116
+[]|\OT1/cmr/m/n/10 Normally, in prac-tice, users
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 1115--1116
+\OT1/cmr/m/n/10 query to the server mul-ti-ple
+ []
+
+
+Overfull \hbox (119.02902pt too wide) in alignment at lines 1109--1117
+[] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1117
+ []
+
+
+Underfull \hbox (badness 7397) in paragraph at lines 1124--1124
+\OT1/cmr/m/n/10 back to com-men-ta-tor's
+ []
+
+
+Underfull \hbox (badness 4621) in paragraph at lines 1124--1124
+\OT1/cmr/m/n/10 pro-file with the newly
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 1126--1126
+[]|\OT1/cmr/m/n/10 Testing ac-tiv-ity tran-si-
+ []
+
+
+Underfull \hbox (badness 2173) in paragraph at lines 1126--1126
+\OT1/cmr/m/n/10 tions on press-ing \OT1/cmr/bx/n/10 back
+ []
+
+
+Underfull \hbox (badness 5091) in paragraph at lines 1126--1126
+\OT1/cmr/m/n/10 sub-mit-ting a com-ment.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1126
+\OT1/cmr/m/n/10 Ex-pect-ing \OT1/cmr/m/it/10 User-Pro-
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 1126--1126
+[]|\OT1/cmr/m/n/10 The ac-tual out-come is
+ []
+
+
+Overfull \hbox (4.06357pt too wide) in paragraph at lines 1126--1126
+\OT1/cmr/m/it/10 UserProfile\TS1/cmr/m/it/10 ^^Y\OT1/cmr/m/it/10 ReviewActivi-
+ []
+
+
+Overfull \hbox (4.02791pt too wide) in paragraph at lines 1126--1126
+\OT1/cmr/m/it/10 ty\TS1/cmr/m/it/10 ^^Y\OT1/cmr/m/it/10 UserProfile\TS1/cmr/m/i
+t/10 ^^Y\OT1/cmr/m/it/10 Searchab-
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 1126--1126
+\OT1/cmr/m/it/10 leActivity \OT1/cmr/m/n/10 as ac-tiv-ity is
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 1126--1127
+\OT1/cmr/m/it/10 star-tAc-tiv-ity() \OT1/cmr/m/n/10 to \OT1/cmr/m/it/10 Re-view
+Ac-tiv-
+ []
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 1128--1128
+[]|\OT1/cmr/m/n/10 Commentators shouldn't
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
+[]|\OT1/cmr/m/n/10 Commentator with-out
+ []
+
+
+Underfull \hbox (badness 3118) in paragraph at lines 1130--1130
+\OT1/cmr/m/n/10 GPS turned on should
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 1130--1131
+[]|\OT1/cmr/m/n/10 The method has been moved
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 1130--1131
+\OT1/cmr/m/n/10 from \OT1/cmr/m/it/10 Lo-ca-tion-Ser-vice \OT1/cmr/m/n/10 over 
+to
+ []
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 1132--1132
+[]|\OT1/cmr/m/n/10 Activity re-turns cor-rect
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 1132--1132
+\OT1/cmr/m/n/10 man-ner due to ac-tiv-ity
+ []
+
+
+Underfull \hbox (badness 5374) in paragraph at lines 1132--1132
+\OT1/cmr/m/n/10 re-turned so ap-pli-ca-tion
+ []
+
+
+Overfull \hbox (107.02904pt too wide) in alignment at lines 1120--1134
+[] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1134
+ []
+
+[47] [48] [49] <images/register.png, id=260, 822.07124pt x 1120.78725pt>
+File: images/register.png Graphic file (type png)
+
+<use images/register.png>
+Package pdftex.def Info: images/register.png used on input line 1149.
+(pdftex.def)             Requested size: 137.9979pt x 188.13705pt.
+
+<images/register2.png, id=262, 800.39024pt x 1260.50925pt>
+File: images/register2.png Graphic file (type png)
+
+<use images/register2.png>
+Package pdftex.def Info: images/register2.png used on input line 1151.
+(pdftex.def)             Requested size: 137.9979pt x 217.32268pt.
+
+<images/login.png, id=264, 797.98125pt x 814.84425pt>
+File: images/login.png Graphic file (type png)
+ <use images/login.png>
+Package pdftex.def Info: images/login.png used on input line 1161.
+(pdftex.def)             Requested size: 137.9979pt x 140.90892pt.
+
+[50
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1165 L
+        ogin page, clicking on \textbf{No account yet? Create one} will redi...
+ <./images/register.png> <./images/register2.png>]
+<images/main.png, id=273, 846.16125pt x 484.81125pt>
+File: images/main.png Graphic file (type png)
+ <use images/main.png>
+Package pdftex.def Info: images/main.png used on input line 1168.
+(pdftex.def)             Requested size: 137.9979pt x 79.06569pt.
+
+<images/main2.png, id=274, 846.16125pt x 790.75426pt>
+File: images/main2.png Graphic file (type png)
+ <use images/main2.png>
+Package pdftex.def Info: images/main2.png used on input line 1170.
+(pdftex.def)             Requested size: 137.9979pt x 128.96057pt.
+
+[51pdfTeX warning (ext4): destination with the same identifier (name{figure.7})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1176 {\large 4
+                . Stream Player}\parpdfTeX warning (ext4): destination with the
+ same identifier (name{figure.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1176 {\large 4
+                . Stream Player}\par <./images/login.png> <./images/main.png> <
+./images/main2.png>] <images/player.png, id=283, 819.66225pt x 988.29225pt>
+File: images/player.png Graphic file (type png)
+
+<use images/player.png>
+Package pdftex.def Info: images/player.png used on input line 1179.
+(pdftex.def)             Requested size: 137.9979pt x 166.3788pt.
+
+<images/settings.png, id=284, 864.22874pt x 769.07326pt>
+File: images/settings.png Graphic file (type png)
+
+<use images/settings.png>
+Package pdftex.def Info: images/settings.png used on input line 1186.
+(pdftex.def)             Requested size: 137.9979pt x 122.79605pt.
+
+<images/settings2.png, id=285, 858.20625pt x 735.34724pt>
+File: images/settings2.png Graphic file (type png)
+
+<use images/settings2.png>
+Package pdftex.def Info: images/settings2.png used on input line 1188.
+(pdftex.def)             Requested size: 137.9979pt x 118.24142pt.
+
+<images/signup.png, id=287, 864.22874pt x 1478.52374pt>
+File: images/signup.png Graphic file (type png)
+
+<use images/signup.png>
+Package pdftex.def Info: images/signup.png used on input line 1195.
+(pdftex.def)             Requested size: 137.9979pt x 236.0723pt.
+ [52pdfTeX warning (ext4): destination with the same identifier (name{figure.9}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1199 O
+        nce the form has been submitted, application will redirect user back...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1199 O
+        nce the form has been submitted, application will redirect user back...
+ <./images/player.png> <./images/settings.png> <./images/settings2.png>]
+<images/matchmaking.png, id=298, 866.63776pt x 1473.70575pt>
+File: images/matchmaking.png Graphic file (type png)
+
+<use images/matchmaking.png>
+Package pdftex.def Info: images/matchmaking.png used on input line 1202.
+(pdftex.def)             Requested size: 137.9979pt x 234.65091pt.
+
+<images/broadcast.png, id=299, 857.00175pt x 1471.29675pt>
+File: images/broadcast.png Graphic file (type png)
+
+<use images/broadcast.png>
+Package pdftex.def Info: images/broadcast.png used on input line 1204.
+(pdftex.def)             Requested size: 137.9979pt x 236.91644pt.
+ [53pdfTeX warning (ext4): destination with the same identifier (name{figure.11
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1208 T
+        o broadcast, commentator will first have to fill out the form, in th...
+ <./images/signup.png>] <images/chat.png, id=307, 858.20625pt x 1458.04726pt>
+File: images/chat.png Graphic file (type png)
+
+<use images/chat.png>
+Package pdftex.def Info: images/chat.png used on input line 1212.
+(pdftex.def)             Requested size: 137.9979pt x 234.44922pt.
+ [54pdfTeX warning (ext4): destination with the same identifier (name{figure.12
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1216 T
+        he chat room model is pretty simple, it shows only name of the sende...
+ <./images/matchmaking.png> <./images/broadcast.png>] [55pdfTeX warning (ext4):
+ destination with the same identifier (name{figure.13}) has been already used, 
+duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1220 \newpage
+                <./images/chat.png>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 1228.
+ [56]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+ [57]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+ [58] [59]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+ [60]
+(c:/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1315
+.
 
 (c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 142.
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
- [6]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 158.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 158.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 159.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 159.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 159.
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ” in font cmr12!
- [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
-[]\OT1/cmr/m/n/10 Operating
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <5> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1315.
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 1350
+.
+
+(c:/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <5> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1350.
+
+ [61
+
+] [62] [63] [64]
+[65] [66] [67] [68]
+Overfull \hbox (62.51297pt too wide) in paragraph at lines 1707--1708
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-[]\OT1/cmr/m/n/10 Operating
+[69] [70] [71] [72] [73] [74] [75] [76]
+(c:/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(c:/texlive/2016/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+) [77]
+Overfull \hbox (50.26271pt too wide) in paragraph at lines 2102--2103
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][] 
  []
 
-
-Underfull \hbox (badness 1675) in paragraph at lines 218--219
-[]\OT1/cmr/m/n/10 Interaction be-tween users are only vi-able when
+[78]
+Overfull \hbox (38.01245pt too wide) in paragraph at lines 2144--2145
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]\OT1/cmr/m/n/10 Operating
- []
-
-[11] [12] [13]
-Underfull \hbox (badness 1337) in paragraph at lines 272--272
-[]\OT1/cmr/m/n/10 The app shall use user's reg-is-tered
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]\OT1/cmr/m/n/10 Non-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]\OT1/cmr/m/n/10 Compliance
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--294
-[]\OT1/cmr/m/n/10 Non-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--296
-[]\OT1/cmr/m/n/10 Non-
- []
-
-
-Overfull \hbox (56.43303pt too wide) in paragraph at lines 262--303
-[][] 
- []
-
-[14]
-Overfull \vbox (77.59988pt too high) has occurred while \output is active []
-
-
-[15] <images/use-case-diagram.png, id=74, 601.19606pt x 527.11931pt>
-File: images/use-case-diagram.png Graphic file (type png)
-
-<use images/use-case-diagram.png>
-Package pdftex.def Info: images/use-case-diagram.png used on input line 308.
-(pdftex.def)             Requested size: 398.33858pt x 349.25911pt.
-
-Overfull \hbox (53.33858pt too wide) in paragraph at lines 308--309
- [][] 
- []
-
-[16 <./images/use-case-diagram.png>]
-<images/er-diagram.png, id=80, 361.35pt x 265.59225pt>
-File: images/er-diagram.png Graphic file (type png)
-
-<use images/er-diagram.png>
-Package pdftex.def Info: images/er-diagram.png used on input line 321.
-(pdftex.def)             Requested size: 398.33858pt x 292.7805pt.
-
-Overfull \hbox (53.33858pt too wide) in paragraph at lines 321--322
- [][] 
- []
-
-[17 <./images/er-diagram.png>]
-<images/system-architecture.png, id=90, 605.26125pt x 572.28806pt>
-File: images/system-architecture.png Graphic file (type png)
-
-<use images/system-architecture.png>
-Package pdftex.def Info: images/system-architecture.png used on input line 331.
-
-(pdftex.def)             Requested size: 384.1122pt x 363.1893pt.
-
-Overfull \hbox (39.1122pt too wide) in paragraph at lines 331--332
- [][] 
- []
-
-<images/data-flow-diagram.png, id=91, 794.97pt x 496.85625pt>
-File: images/data-flow-diagram.png Graphic file (type png)
-
-<use images/data-flow-diagram.png>
-Package pdftex.def Info: images/data-flow-diagram.png used on input line 339.
-(pdftex.def)             Requested size: 398.33858pt x 248.96579pt.
-
-Overfull \hbox (53.33858pt too wide) in paragraph at lines 339--340
- [][] 
- []
-
-[18 <./images/system-architecture.png>] [19 <./images/data-flow-diagram.png>]
-[20] [21] [22]
-Overfull \hbox (74.84512pt too wide) in paragraph at lines 401--407
-[] 
- []
-
-
-Overfull \hbox (54.7785pt too wide) in paragraph at lines 413--419
-[] 
- []
-
-[23]
+[79] [80] [81] [82] [83] [84]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
- [24]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 443.
- [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 443.
+ [85
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2407.
+ [86]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2407.
  (./FinalReport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 443.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 443.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2407.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2407.
+
 Package rerunfilecheck Info: File `FinalReport.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 443.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2407.
  ) 
 Here is how much of TeX's memory you used:
- 5177 strings out of 493013
- 76945 string characters out of 6136993
- 171512 words of memory out of 5000000
- 8670 multiletter control sequences out of 15000+600000
- 7926 words of font info for 28 fonts, out of 8000000 for 9000
+ 10648 strings out of 493013
+ 163464 string characters out of 6136993
+ 509307 words of memory out of 5000000
+ 12921 multiletter control sequences out of 15000+600000
+ 11589 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,12n,25p,1363b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b>
-Output written on FinalReport.pdf (25 pages, 264243 bytes).
+ 28i,12n,42p,1486b,3550s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx5.pfb><c:/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pf
+b><c:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texl
+ive/2016/texmf-dist/fonts/type1/public/cm-super/sfti0500.pfb><c:/texlive/2016/t
+exmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on FinalReport.pdf (86 pages, 1014367 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1840 PDF objects out of 2073 (max. 8388607)
+ 1687 compressed objects within 17 object streams
+ 1178 named destinations out of 1200 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
