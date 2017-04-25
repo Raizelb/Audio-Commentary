@@ -86,6 +86,9 @@ public class ReviewActivity extends Activity {
                         JSONObject jObj = new JSONObject(response.body().string());
                         boolean error = jObj.getBoolean("error");
                         if(!error) {
+                            Intent intent = new Intent(getApplicationContext(),UserProfile.class);
+                            intent.putExtras(extras);
+                            startActivity(intent);
                             finish();
                         } else {
                             // Error in submitting comment. Get the error message

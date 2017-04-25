@@ -36,7 +36,7 @@ public interface Database {
     @FormUrlEncoded
     @POST("/WebScripts/register_commentator.php")
     Call<ResponseBody> register_commentator(
-            @Field("email") String inputEmail,
+            @Field("user_id") String inputUserID,
             @Field("team") String inputTeam,
             @Field("description") String inputDescription
     );
@@ -53,5 +53,11 @@ public interface Database {
             @Field("user_id") String userID,
             @Field("comment_content") String commentContent,
             @Field("comment_rating") String commentRating
+    );
+
+    @FormUrlEncoded
+    @POST("/WebScripts/get_commentator.php")
+    Call<ResponseBody> get_commentator(
+            @Field("user_id") String userID
     );
 }

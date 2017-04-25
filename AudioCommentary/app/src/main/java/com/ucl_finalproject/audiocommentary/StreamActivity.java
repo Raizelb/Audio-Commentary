@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.v4.content.res.TypedArrayUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,11 +24,15 @@ import com.wowza.gocoder.sdk.api.status.WZState;
 import com.wowza.gocoder.sdk.api.status.WZStatus;
 import com.wowza.gocoder.sdk.api.status.WZStatusCallback;
 
+import java.util.Arrays;
+
 /**
  * Created by Hoang on 23/01/2017.
  */
 
 public class StreamActivity extends Activity implements WZStatusCallback, View.OnClickListener{
+
+    private final String TAG = this.getClass().getSimpleName();
 
     // The top level GoCoder API interface
     private WowzaGoCoder goCoder;
@@ -139,7 +144,7 @@ public class StreamActivity extends Activity implements WZStatusCallback, View.O
     }
 
     private void initialise() {
-        goCoder = WowzaGoCoder.init(getApplicationContext(),"GOSK-6643-0103-F6AA-8675-9F53");
+        goCoder = WowzaGoCoder.init(getApplicationContext(),"GOSK-8B43-0103-D04D-2E8A-BC61");
 
         if (goCoder == null) {
             // If initialization failed, retrieve the last error and display it
@@ -149,24 +154,36 @@ public class StreamActivity extends Activity implements WZStatusCallback, View.O
             // Create a broadcaster instance
             goCoderBroadcaster = new WZBroadcast();
 
-            //// Initialize the audio input device interface
+            // Initialize the audio input device interface
             wzAudioDevice = new WZAudioDevice();
 
             // Create a configuration instance for the broadcaster
             broadcastConfig = new WZBroadcastConfig();
+
+            WZMediaConfig wzMediaConfig = new WZMediaConfig();
+            Log.d(TAG,Integer.toString(broadcastConfig.getAudioSampleRate()));
+            Log.d(TAG,Integer.toString(broadcastConfig.getAudioChannels()));
+            Log.d(TAG,Integer.toString(broadcastConfig.getAudioBitRate()));
+            //set sample rate
+            if (Arrays.binarySearch(wzMediaConfig.SUPPORTED_AUDIO_SAMPLE_RATES,wzMediaConfig.DEFAULT_AUDIO_SAMPLE_RATE) < 0) {
+                broadcastConfig.setAudioSampleRate(wzMediaConfig.SUPPORTED_AUDIO_SAMPLE_RATES[wzMediaConfig.SUPPORTED_AUDIO_SAMPLE_RATES.length - 1]);
+                Log.d(TAG,Integer.toString(broadcastConfig.getAudioSampleRate()));
+            }
+
+
             broadcastConfig.setLogLevel(WZLog.LOG_LEVEL_DEBUG);
             broadcastConfig.setAudioBroadcaster(wzAudioDevice);
             broadcastConfig.setVideoEnabled(false);
             broadcastConfig.setAudioEnabled(true);
 
             // Set the address for the Wowza Streaming Engine server or Wowza Cloud
-            //broadcastConfig.setHostAddress("f2ca87.entrypoint.cloud.wowza.com");
-            broadcastConfig.setHostAddress("34.253.13.70");
+            //broadcastConfig.setHostAddress("84da02.entrypoint.cloud.wowza.com/app-c7c9");
+            broadcastConfig.setHostAddress("52.214.37.172");
             //broadcastConfig.setHostAddress("192.168.1.10");
             broadcastConfig.setPortNumber(1935);
-            broadcastConfig.setApplicationName("app-4dae");
+            broadcastConfig.setApplicationName("app-c7c9");
             // Set the name of the stream
-            broadcastConfig.setStreamName("cd175e53");
+            broadcastConfig.setStreamName("3169b70d");
         }
     }
 }

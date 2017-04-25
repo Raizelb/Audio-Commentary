@@ -72,7 +72,7 @@ public class SearchableActivity extends ListActivity {
         pDialog.setMessage("Searching...");
         showDialog();
 
-        Database databaseService = ServiceGenerator.getClient(API_BASE_URL).create(Database.class);
+        final Database databaseService = ServiceGenerator.getClient(API_BASE_URL).create(Database.class);
         Call<ResponseBody> response = databaseService.user_search(query);
         response.enqueue(new Callback<ResponseBody>() {
             @Override
@@ -108,13 +108,8 @@ public class SearchableActivity extends ListActivity {
                                     try {
                                         JSONObject mInfo = names.getJSONObject(position);
                                         Log.d("SearchableActivity",mInfo.toString());
-                                        Intent intent = new Intent(getApplicationContext(),UserProfile.class);
-                                        intent.putExtra("name",mInfo.getString("name"));
-                                        intent.putExtra("team_support", mInfo.getString("team_support"));
-                                        intent.putExtra("description", mInfo.getString("description"));
-                                        intent.putExtra("user_id",mInfo.getString("user_id"));
-                                        intent.putExtra("rating",mInfo.getString("rating"));
-                                        startActivity(intent);
+                                        final String name = mInfo.getString("name");
+                                        getCommentatorProfile(name, mInfo.getString("user_id"),databaseService);
                                     } catch(Exception e) {
                                         e.printStackTrace();
                                     }
@@ -147,6 +142,53 @@ public class SearchableActivity extends ListActivity {
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 hideDialog();
+            }
+        });
+    }
+
+    private void getCommentatorProfile(final String name, final String userID, Database databaseService) {
+        pDialog.setMessage("Loading...");
+        showDialog();
+
+        Call<ResponseBody> response = databaseService.get_commentator(userID);
+        response.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                hideDialog();
+
+                try {
+                    if(response.isSuccessful()) {
+                        JSONObject jObj = new JSONObject(response.body().string());
+                        boolean error = jObj.getBoolean("error");
+                        if(!error) {
+                            JSONObject commentator = jObj.getJSONObject("commentator");
+
+                            Intent intent = new Intent(getApplicationContext(),UserProfile.class);
+                            intent.putExtra("name", name);
+                            intent.putExtra("team_support", commentator.getString("team_support"));
+                            intent.putExtra("description", commentator.getString("description"));
+                            intent.putExtra("user_id",userID);
+                            intent.putExtra("rating",commentator.getString("rating"));
+                            startActivity(intent);
+                        } else {
+                            String errorMsg = jObj.getString("error_msg");
+                            Toast.makeText(getApplicationContext(),
+                                    errorMsg, Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        // Error in request. Get the error message
+                        String errorMsg = response.message();
+                        Toast.makeText(getApplicationContext(),
+                                errorMsg, Toast.LENGTH_LONG).show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+
             }
         });
     }

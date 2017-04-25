@@ -42,7 +42,7 @@ public class CommentatorSignUpActivitiy extends Activity {
     private SQLiteHandler db;
     private SessionManager session;
 
-    private String team, email, description;
+    private String team, userID, description;
 
     @Override
     public void onCreate(Bundle onSavedInstanceState) {
@@ -50,7 +50,7 @@ public class CommentatorSignUpActivitiy extends Activity {
         setContentView(R.layout.activity_commentator_signup);
 
         db = new SQLiteHandler(getApplicationContext());
-        email = db.getUserDetails().get("email");
+        userID = db.getUserDetails().get("uid");
 
         session = new SessionManager(getApplicationContext());
 
@@ -89,7 +89,7 @@ public class CommentatorSignUpActivitiy extends Activity {
             public void onClick(View v) {
                 description = mEditText.getText().toString().trim();
                 if(!description.isEmpty()) {
-                    registerCommentator(email,team,description);
+                    registerCommentator(userID,team,description);
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Please Enter a short description of yourself",
@@ -101,7 +101,7 @@ public class CommentatorSignUpActivitiy extends Activity {
     }
 
     private void registerCommentator(String email, String team, String description) {
-        pDialog.setMessage("Logging in ...");
+        pDialog.setMessage("Submitting ...");
         showDialog();
 
         Database databaseService = ServiceGenerator.getClient(API_BASE_URL).create(Database.class);

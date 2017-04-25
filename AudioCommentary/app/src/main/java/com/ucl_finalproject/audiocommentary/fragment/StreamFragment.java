@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.ucl_finalproject.audiocommentary.MatchMakingActivity;
 import com.ucl_finalproject.audiocommentary.R;
 import com.ucl_finalproject.audiocommentary.StreamActivity;
+import com.ucl_finalproject.audiocommentary.helper.SQLiteHandler;
 
 /**
  * Created by Hoang on 23/01/2017.
@@ -20,6 +22,7 @@ public class StreamFragment extends Fragment {
 
     private Button streamBtn;
     private View view;
+    private SQLiteHandler sqLiteHandler;
 
     public StreamFragment() {
         // Required empty public constructor
@@ -33,6 +36,8 @@ public class StreamFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        sqLiteHandler = new SQLiteHandler(getContext());
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_stream, container, false);
         streamBtn = (Button) view.findViewById(R.id.stream_btn);
@@ -40,7 +45,13 @@ public class StreamFragment extends Fragment {
         streamBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity().getApplicationContext(), StreamActivity.class));
+                if(Integer.parseInt(sqLiteHandler.getUserDetails().get("commentator")) == 1) {
+                    startActivity(new Intent(getActivity().getApplicationContext(), MatchMakingActivity.class));
+                }
+                else {
+                    Toast.makeText(getContext(), "You are not a commentator", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 

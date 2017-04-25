@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity{
     private View navHeader;
     private TextView name;
     private Toolbar toolbar;
+    private SQLiteHandler sqLiteHandler;
 
     // index to identify current nav menu item
     public static int navItemIndex = 0;
@@ -97,7 +98,8 @@ public class MainActivity extends AppCompatActivity{
      */
     private void loadNavHeader() {
         // name, website
-        name.setText("Sam Mai");
+        sqLiteHandler = new SQLiteHandler(getApplicationContext());
+        name.setText(sqLiteHandler.getUserDetails().get("name"));
     }
 
     /***
@@ -205,16 +207,6 @@ public class MainActivity extends AppCompatActivity{
                         navItemIndex = 3;
                         CURRENT_TAG = TAG_CHAT;
                         break;
-                    case R.id.nav_about_us:
-                        // launch new intent instead of loading fragment
-                        startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
-                        drawerLayout.closeDrawers();
-                        return true;
-                    case R.id.nav_privacy_policy:
-                        // launch new intent instead of loading fragment
-                        startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
-                        drawerLayout.closeDrawers();
-                        return true;
                     default:
                         navItemIndex = 0;
                 }

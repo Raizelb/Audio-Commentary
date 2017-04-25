@@ -28,7 +28,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     private static final String TABLE_USER = "user";
 
     // Login Table Columns names
-    private static final String KEY_ID = "id";
+    //private static final String KEY_ID = "id";
     private static final String KEY_NAME = "name";
     private static final String KEY_EMAIL = "email";
     private static final String KEY_COMMENTATOR = "commentator";
@@ -42,10 +42,14 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     // Creating Tables
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
+        /*String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
                 + KEY_EMAIL + " TEXT UNIQUE," + KEY_COMMENTATOR + " INTEGER,"
-                + KEY_UID + " TEXT," + KEY_CREATED_AT + " TEXT" + ")";
+                + KEY_UID + " TEXT," + KEY_CREATED_AT + " TEXT" + ")";*/
+        String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
+                + KEY_NAME + " TEXT,"
+                + KEY_EMAIL + " TEXT UNIQUE," + KEY_COMMENTATOR + " INTEGER,"
+                + KEY_UID + " TEXT UNIQUE PRIMARY KEY," + KEY_CREATED_AT + " TEXT" + ")";
         db.execSQL(CREATE_LOGIN_TABLE);
 
         Log.d(TAG, "Database tables created");
@@ -93,11 +97,12 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         // Move to first row
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
-            user.put("name", cursor.getString(1));
-            user.put("email", cursor.getString(2));
-            user.put("commentator", cursor.getString(3));
-            user.put("uid", cursor.getString(4));
-            user.put("created_at", cursor.getString(5));
+            //Log.d("Database",cursor.getString(1));
+            user.put("name", cursor.getString(0));
+            user.put("email", cursor.getString(1));
+            user.put("commentator", cursor.getString(2));
+            user.put("uid", cursor.getString(3));
+            user.put("created_at", cursor.getString(4));
         }
         cursor.close();
         db.close();
@@ -115,6 +120,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         // Delete All Rows
         Cursor dbCursor = db.query(TABLE_USER, null, null, null, null, null, null);
         db.delete(TABLE_USER, null, null);
+        //db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
         db.close();
 
         Log.d(TAG, "Deleted all user info from sqlite");

@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    private void stream() {
+    /*private void stream() {
         final int bufferSize = AudioRecord.getMinBufferSize(44100,AudioFormat.CHANNEL_IN_MONO,AudioFormat.ENCODING_PCM_16BIT);
         audioRecord = new AudioRecord(MediaRecorder.AudioSource.DEFAULT,44100, AudioFormat.CHANNEL_IN_MONO,AudioFormat.ENCODING_PCM_16BIT,bufferSize);
         if (getEncoder() & audioRecord.getState() != AudioRecord.STATE_UNINITIALIZED) {
@@ -88,7 +88,7 @@ public class HomeFragment extends Fragment {
             e.printStackTrace();
             return false;
         }
-    }
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

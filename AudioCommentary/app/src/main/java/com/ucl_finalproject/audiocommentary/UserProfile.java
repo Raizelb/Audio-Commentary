@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.ucl_finalproject.audiocommentary.Retrofit.Database;
 import com.ucl_finalproject.audiocommentary.Retrofit.ServiceGenerator;
+import com.ucl_finalproject.audiocommentary.helper.SQLiteHandler;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -39,11 +40,13 @@ public class UserProfile extends Activity{
     private ProgressDialog pDialog;
     private final String API_BASE_URL = "http://audiocommentary.000webhostapp.com";
     private String mUserID;
+    private SQLiteHandler sqLiteHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile);
+
 
         mName = (TextView) findViewById(R.id.commentator_name);
         mTeam = (TextView) findViewById(R.id.commentator_team);
@@ -71,12 +74,20 @@ public class UserProfile extends Activity{
 
         loadComments();
 
+        sqLiteHandler = new SQLiteHandler(getApplicationContext());
+
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),ReviewActivity.class);
-                intent.putExtras(extras);
-                startActivity(intent);
+                if(!mUserID.equals(sqLiteHandler.getUserDetails().get("uid"))) {
+                    Intent intent = new Intent(getApplicationContext(),ReviewActivity.class);
+                    intent.putExtras(extras);
+                    startActivity(intent);
+                    finish();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Can't vote on your own profile",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
