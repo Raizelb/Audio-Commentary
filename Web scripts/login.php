@@ -22,7 +22,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $response["user"]["email"] = $user["email"];
 		$response["user"]["commentator"] = $user["commentator_status"];
         $response["user"]["created_at"] = $user["created_at"];
-        $response["user"]["updated_at"] = $user["updated_at"];
         echo json_encode($response);
     } else {
         // user is not found with the credentials

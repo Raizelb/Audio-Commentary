@@ -12,16 +12,14 @@ if (isset($_POST['user_id'])) {
 	
 	//search user by name
 	$comments = $db->loadComments($user_id);
-	//echo json_encode($user);
-	//$db->searchUserByName($name);
 	
 	if ($comments != false) {
-		//user is found
+		//comments are found
 		$response["error"] = FALSE;
         $response["comments"] = $comments;
         echo json_encode($response);
 	} else {
-        // user is not found with the credentials
+        // comments not found
         $response["error"] = TRUE;
         $response["error_msg"] = "Comments not found";
         echo json_encode($response);

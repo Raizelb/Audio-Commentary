@@ -250,7 +250,7 @@ class DB_Functions {
 			return $comments;
 		}
 		else {
-			return NULL;
+			return false;
 		}
 	}
  
