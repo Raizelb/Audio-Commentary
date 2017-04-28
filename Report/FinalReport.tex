@@ -19,7 +19,7 @@
 \linespread{1.25}
 \begin{document}
 \begin{center}
-{\Huge Live Audio Commentary\\[5cm]}
+{\Huge An App for Fan Based Live Sports Audio Commentary\\[5cm]}
 
 {\Large Sam Mai
 
@@ -33,9 +33,9 @@ Supervisor: Harry Strange}
 \begin{center}
 {\Large \textbf{Abstract}}
 \end{center}
-The project involves development of an Android application to provide Football fans a social platform to interact with others and motivates users to get involved through live streaming capabilities. The application will use be supported by two different servers, one is used for live streaming capabilities and another back-end server to store users' information. The aim of the project is to provide a simple social platorm for Football fans where they can more involved with the sport. The main goal of the project is to develop an Android application that can perform a range of functionalities including: live streaming, live chat and socialising with other users. The main challenge of the project is to ensure the quality of live streams and the experience these live streams will bring to other users.\par
-\noindent The project is carried out in an interative manner, goals and objectives are broken down into smaller objectives that can be achieved in a shorter period of time which in turn would be broken down into a list of weekly objectives. The project involved understandings of different technologies: Android development, PHP scripting + MySQL, Firebase Cloud Messaging and Wowza GoCoder SDK.\par
-\noindent The project resulted in a fully functional and tested Android application that achieved the set aims and goals along with a functional back-end server.\\
+The project involves development of an Android application to provide football fans a social platform to interact with others and motivates users to get involved through live streaming capabilities. The application will be supported by two different servers, one is used for live streaming capabilities and another back-end server to store users' information. The aim of the project is to provide a simple social platorm for Football fans where they can more involved with the sport. The main goal of the project is to develop an Android application that can perform a range of functionalities including: live streaming, live chat and socialising with other users. The main challenge of the project is to ensure the quality of live streams and the experience these live streams will bring to other users.\par
+\noindent The project is carried out in an iterative manner, goals and objectives are broken down into smaller objectives that can be achieved in a shorter period of time which in turn would be broken down into a list of weekly objectives. The project involved understandings of different technologies: Android development, PHP scripting + MySQL, Firebase Cloud Messaging and Wowza GoCoder SDK.\par
+\noindent The project resulted in a fully functional and tested Android application that achieved the set aims and goals along with a functional back-end server. A document has been produced that provides all technical details about the whole system including a user manual to demonstrate the application's capabilities and a system manual to assist further development.\\
 \newpage
 Contents
 \begin{itemize}
@@ -49,95 +49,94 @@ Contents
 			\item [1.4.1] Aims \hfill7
 			\item [1.4.2] Goals \hfill7
 		\end{itemize}
-		\item [1.5] How the project was conducted \hfill7
+		\item [1.5] How the project was conducted \hfill8
 		\item [1.6] Structure of this report \hfill8
 	\end{itemize}
-    	\item [2] Background Information \hfill8
+    	\item [2] Background Information \hfill10
 	\begin{itemize}
-		\item [2.1] Sources of Information \hfill8
+		\item [2.1] Sources of Information \hfill10
 		\begin{itemize}
-			\item [2.1.1] Android Developers \hfill8
-			\item [2.1.2] Android Login and Registration with PHP, MySQL and SQLite \hfill9
-			\item [2.1.3] Retrofit - Getting Started and Creating an Android Client \hfill9
-			\item [2.1.4] How to Create an Android Chat App Using Firebase \hfill10
-			\item [2.1.5] Android Sliding Menu using Navigation Drawer \hfill10
-			\item [2.1.6] Stack Overflow \hfill10
+			\item [2.1.1] Android Developers \hfill10
+			\item [2.1.2] Android Login and Registration with PHP, MySQL and SQLite \hfill10
+			\item [2.1.3] Retrofit - Getting Started and Creating an Android Client \hfill11
+			\item [2.1.4] How to Create an Android Chat App Using Firebase \hfill11
+			\item [2.1.5] Android Sliding Menu using Navigation Drawer \hfill11
+			\item [2.1.6] Stack Overflow \hfill12
 		\end{itemize}
-		\item [2.2] Similar Products \hfill11
-		\item [2.3] Supporting Tools and Libraries \hfill13
+		\item [2.2] Similar Products \hfill12
+		\item [2.3] Supporting Tools and Libraries \hfill15
 		\begin{itemize}
-			\item [2.3.1] Retrofit API \hfill13
-			\item [2.3.2] Wowza GoCoder SDK \hfill14
-			\item [2.3.3] JW Player SDK \hfill14 
-			\item [2.3.4] Firebase API \hfill15
-			\item [2.3.5] The Monkey \hfill15
+			\item [2.3.1] Retrofit API \hfill15
+			\item [2.3.2] Wowza GoCoder SDK \hfill15
+			\item [2.3.3] JW Player SDK \hfill16
+			\item [2.3.4] Firebase API \hfill16
+			\item [2.3.5] The Monkey \hfill17
 		\end{itemize}
 	\end{itemize}
-    	\item [3] Requirements and Analysis \hfill16
+    	\item [3] Requirements and Analysis \hfill18
 	\begin{itemize}
-		\item [3.1] Requirements \hfill16
-		\item [3.2] Use Cases \hfill17
+		\item [3.1] Requirements \hfill18
+		\item [3.2] Use Cases \hfill19
 		\begin{itemize}
-			\item [3.2.1] Use Case Diagram \hfill17
-			\item [3.2.2] Use Case Titles \hfill18
+			\item [3.2.1] Use Case Diagram \hfill19
 		\end{itemize}
-		\item [3.3] Entity-Relationship (ER) Diagram \hfill18
+		\item [3.3] Entity-Relationship (ER) Diagram \hfill21
 	\end{itemize}
-	\item [4] Design and Implementation \hfill19
+	\item [4] Design and Implementation \hfill22
 	\begin{itemize}
-		\item [4.1] System Architecture \hfill19
-		\item [4.2] Data Flow Diagram \hfill21
-		\item [4.3] Application Components \hfill22
+		\item [4.1] System Architecture \hfill22
+		\item [4.2] Data Flow Diagram \hfill23
+		\item [4.3] Application Components \hfill24
 		\begin{itemize}
-			\item [4.3.1] Broadcasting to Streaming Server \hfill22 
+			\item [4.3.1] Broadcasting to Streaming Server \hfill225
 			\begin{itemize}
-				\item [4.3.1.1] Audio Sampling Rate\hfill23 
+				\item [4.3.1.1] Audio Sampling Rate\hfill235
 			\end{itemize}
-			\item [4.3.2] Database\hfill24
+			\item [4.3.2] Database\hfill26
 			\begin{itemize}
-				\item [4.3.2.1] Structure \hfill24
-				\item [4.3.2.2] Implementation \hfill24
+				\item [4.3.2.1] Structure \hfill26
+				\item [4.3.2.2] Implementation \hfill26
 			\end{itemize}
-			\item [4.3.3] Location Service \hfill25
-			\item [4.3.4] Connecting to Server Side \hfill26
-			\item [4.3.5] Live Chat \hfill26 
-			\item [4.3.6] Searching\hfill27
+			\item [4.3.3] Location Service \hfill27
+			\item [4.3.4] Connecting to Server Side \hfill28
+			\item [4.3.5] Live Chat \hfill28
+			\item [4.3.6] Searching\hfill29
 		\end{itemize}
-		\item [4.4] Server Components \hfill28
+		\item [4.4] Server Components \hfill30
 		\begin{itemize}
-			\item [4.4.1] Server Database \hfill28
+			\item [4.4.1] Server Database \hfill30
 			\begin{itemize}
-				\item [4.4.1.1] Structure \hfill28
-				\item [4.4.1.2] Implementation \hfill29
+				\item [4.4.1.1] Structure \hfill30
+				\item [4.4.1.2] Implementation \hfill31
 			\end{itemize}
-			\item [4.4.2] Storing Passwords \hfill29
-			\item [4.4.3] POST Requests \hfill30 
+			\item [4.4.2] Storing Passwords \hfill31
+			\item [4.4.3] POST Requests \hfill32
 		\end{itemize}
 	\end{itemize}
-	\item [5] Testing\hfill31
+	\item [5] Testing\hfill34
 	\begin{itemize}
-		\item [5.1] Stress Testing \hfill31
-		\item [5.2] Functional Testing \hfill32
-		\item [5.3] Device Testing \hfill32
-		\item [5.4] Summary \hfill33
+		\item [5.1] Stress Testing \hfill34
+		\item [5.2] Functional Testing \hfill34
+		\item [5.3] Device Testing \hfill35
+		\item [5.4] Summary \hfill37
 	\end{itemize}
-	\item [6] Conclusions and Evaluation \hfill33
+	\item [6] Conclusions and Evaluation \hfill38
 	\begin{itemize}
-		\item [6.1] Summary of Achievements \hfill33
-		\item [6.2] Evaluation \hfill34
-		\item [6.3] Future Developments \hfill35 
-		\item [6.4] Conclusions \hfill35
+		\item [6.1] Summary of Achievements \hfill38
+		\item [6.2] Evaluation \hfill38
+		\item [6.3] Future Developments \hfill39
+		\item [6.4] Conclusions \hfill39
 	\end{itemize}
-	\item [7] Appendices \hfill36
+	\item [7]Appendices \hfill41
 	\begin{itemize}
-		\item [7.1] Use Cases \hfill36
-		\item [7.2] System Overview / Class Listing \hfill45
-		\item [7.3] Testing Results \hfill47
-		\item [7.4] System Manual \hfill48
-		\item [7.5] User Manual \hfill49
-		\item [7.6] Project Plan and Interim Report \hfill55
-		\item [7.7] Code Listing \hfill60
-		\item [7.8] References \hfill85
+		\item [A] Use Cases \hfill41
+		\item [B] System Overview / Class Listing \hfill50
+		\item [C] Testing Results \hfill52
+		\item [D] System Manual \hfill53
+		\item [E] User Manual \hfill54
+		\item [F] Project Plan and Interim Report \hfill60
+		\item [G] Code Listing \hfill65
+		\item [H] References \hfill91
 	\end{itemize}
 \end{itemize}
 \newpage
@@ -145,7 +144,7 @@ Contents
 {\huge 1. Introduction} \par
 {\Large1.1 The Problem} \par
 Football is one of the most anticipated sports around the world and due to its popularity, football fans often find it hard to follow every single match in a season for numerous reasons be it travel distance, ticket price, accessibility to content etc. To overcome the problem, people may decide to sit around pubs where they can watch the match or if people have access to a computer, streaming from different sources can also be considered a temporary solution. Of course, these solutions are not perfect and it kills the fun of watching football because of the lack of interactions between the fans which is what football is about.\par
-In summary, it's hard for football fans to enjoy the sport they love so much without compromising different important aspects of their lives.\par
+In summary, it's hard for football fans to enjoy the sport they love so much without compromising different important aspects of their lives. Therefore, this project is concerned with providing a social platform for fans who are attending a game to give live audio commentary for other fans to listen to.\par
 {\Large 1.2 Why I chose this project?} \par
 I chose this project because this is the problem that my family members also experience a lot and it can be quite frustrating to certain people hence needs to be resolved.\par
 Apart from that, I also feel that this is the perfect opportunity to learn and improve my technical capability by tackling new areas which I have little to no experience in.\par
@@ -155,22 +154,38 @@ Furthermore, not only helping those that don't have frequent access to football 
 2) Another challenge is the quality of the audio stream, this is compromised by a lot of factors mainly due to different sample rate supported by different devices and the amount of data used for different sample rate (Keeping in mind this is outside where Wi-Fi is not available so the amount of data is limited).\par
 {\Large 1.4 Aims and Goals}\par
 {\large 1.4.1 Aims}\par
-To develop an Android application where football fans can interact with each other. The application will allow users to listen to live audio commentaries hosted by other users, more specifically commentators. Users can share their own thoughts and insights by registering to become a commentator and record their own commentaries while others can also give feedback by submitting comments at the same time.\par
-{\large 1.4.2 Goals}
+The aim of the project are:
+\vspace{-5mm}
 \begin{itemize}
-	\item To allow users to follow football games from others’ points of view through live commentaries.
-	\item To allow users to share their thoughts and insights about football games through live commentaries.
-	\item To allow users to express their views on quality of commentaries from different commentators.
-	\item To offer practices to users who are interested in doing audio commentaries.
-	\item To allow users to interact with each other in a friendly manner
+	\item [1.] To learn and develop Android applications incorporating a range of different technologies.
+	\item [2.] To learn and develop a simple RESTful web service using PHP and MySQL.
+	\item [3.] To gain an understanding of good coding practice and apply it in the project.
+\end{itemize}
+{\large 1.4.2 Goals}\par
+This section outlines the list of goals the system wish to achieve using the knowledge gained from fulfiling the aims of the project.
+\vspace{-5mm}
+\begin{itemize}
+	\item [1.] To allow users to follow football games from others’ points of view through live commentaries.
+	\item [2.] To allow users to share their thoughts and insights about football games through live commentaries.
+	\item [3.] To allow users to express their views on quality of commentaries from different commentators.
+	\item [4.] To offer practices to users who are interested in doing audio commentaries.
+	\item [5.] To allow users to interact with each other in a friendly manner
 \end{itemize}
 {\Large 1.5 How the project was conducted}\par
-An interative approach was followed thorughout the duration of the project. Firstly, the initial version is a working product with only basic functionalities, then further improvements and extra functionalities are added in every increment leading all the way up until the end of the project.\par
+An iterative approach was followed thorughout the duration of the project. The project is divided into multiple cycles with each lasts for a short period of time ranging from two to three weeks. Firstly, the initial version is a working product with only basic functionalities, then further improvements and extra functionalities are added in every increment leading all the way up until the end of the project as shown in figure \ref{fig:iterative-plan}.\par
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{iterative-plan}
+	\caption{Iterative Approach}
+	\label{fig:iterative-plan}
+\end{figure}
 The project plan highlights the durations for each functionality and different phases of the project. The project plan was later revised in the interim report to make sure everything is going well according to the initial plan and whether there were changes to be made.\par
 Meetings with supervisor is also scheduled weekly to report back progress made during the past week, this is also the opportunity to raise any concerns and also ask for feedback for the progression and quality of work. Tasks to be done for the upcoming week will also be discussed here as a collaborative effort.\par
 {\Large 1.6 Structure of this report}\par
 Following this Introduction chapter, the report will then be followed with 5 more chapters. Chapter 2 will be covering background information and related work. This outlines all the main sources of information of related technologies used during the project. Chapter 3 is Requirements and Analysis which discusses all the work done prior to the implementation period of the project. Chapter 4 covers  all the design and implementation strategies, often there will be more than one of way of implementing a certain functionality, this chapter will also be debating related strategies and weigh up their pros and cons. Next up, chapter 5 will go over all the testing strategies performed and the results. Finally, the final chapter 6 will be the conclusion and evaluation that highlights all notable achievements, also what worked well and what didn't and future improvements to be made to the final product.\par
+\newpage
 {\huge 2. Background Information}\par
+This chapter describes all the background information related to the development of the project and also relevant tools and libraries used. In addition, similar products available in the market have also been mentioned and analysed.\par
 {\Large 2.1 Sources of Information}\par
 Building a streaming Android application often involves a lot of different technologies and large proportion of time during project was spent on researching about these technologies and their alternatives to find the most suitale product that will fit with the purpose of the project. Details about these technologies will be discussed in the upcoming sections.\par
 {\large 2.1.1 Android Developers}\par
@@ -188,7 +203,7 @@ Stack Overflow is the largest online community where programmers can share knowl
 When developing an Android application, even the most experienced developers make mistakes, these problems can be the most basic as a typo to more advanced performance related problems. The best thing about Stack Overflow is its large community, developers will often find many solutions to a certain problem, advantages and disadvantages are often discussed in details by other developers. This is probably the fastest way for a developer to learn and progress.\par
 {\Large 2.2 Similar Products}\par
 Below tables outline a range of similar products available on the market at the moment.
-\begin{tabular}{| p{2.2cm} | p{9cm} |}
+\begin{longtable}{| p{2.2cm} | p{9cm} |}
 \hline
 Name & Mobdro\textsuperscript{7}\\
 \hline
@@ -211,9 +226,9 @@ Disadvantages &
 	\item Does not have a live chat room where users can interact.
 \end{itemize}\\
 \hline
-\end{tabular}
-\\
-\begin{tabular}{| p{2.2cm} | p{9cm} |}
+\end{longtable}
+
+\begin{longtable}{| p{2.2cm} | p{9cm} |}
 \hline
 Name & Ustream\textsuperscript{8}\\
 \hline
@@ -238,8 +253,8 @@ Disadvantages &
 	\item Advertisements on freemium version.
 \end{itemize}\\
 \hline
-\end{tabular}
-\\
+\end{longtable}
+
 \begin{tabular}{| p{2.2cm} | p{9cm} |}
 \hline
 Name & UK TVNow\textsuperscript{9}\\
@@ -263,6 +278,7 @@ Disadvantages &
 \end{itemize}\\
 \hline
 \end{tabular} \par
+Overall, \textit{Mobdro} and \textit{Ustream} are formidable competitors with \textit{UK TVNow} lacking behind due to the nature of the application which only supports live TV channels. Based on our aims and goals, \textit{Ustream} has a slight edge over \textit{Mobdro} as the application also supports broadcasting via device's camera. But even \textit{Ustream} lacks certain functionalities like: Broadcasting with just audio or a live chat channel for all users to interact with another (users can only interact via the comment section in a video). This is what our application could offer that other competitors couldn't.\par
 {\Large 2.3 Supporting Tools and Libraries}\par
 {\large 2.3.1 Retrofit API}\par
 Retrofit is a type-safe HTTP client for Android and Java. The library is used extensively in the application as a way to interact with the server side to provide most of the main functionalities like logging in, commenting and such. However, just like most other products, there are competitors to retrofit, most well known one is Volley which is another HTTP library developed by Google.\par
@@ -279,8 +295,11 @@ FCM works by calling an instace of Firebase Database and push the message to Fir
 {\large 2.3.5 The Monkey\textsuperscript{18}}\par
 The Monkey is a program that runs on emulators or actual Android devices to stress test the application by generating a series of pseudo-random user events including clicks, gestures or even system-level events like turning on/off Bluetooth, Airplane Mode etc. This allows developers to spot errors that usually are hard to trigger.\par
 The Monkey came pre-installed along with Android SDK Platform-Tools which are required for Android app development. The Monkey can be launced from the command line and is very flexible such that percentage of different types of events can be controlled or tests can be set to run on only a specific package etc.\par
+\newpage
 {\huge 3. Requirements and Analysis}\par
+In order to achieve a high quality design, there's a need to determine specific feature expectations. This chapter will be discussing the process involved and how the requirements are gathered.\par
 {\Large 3.1 Requirements}\par
+The basic set of requirements was gathered from the problem statement outlined in the \textit{Introduction} chapter in addtion with the challenges, aims and goals of the project. This was then further expanded by examining similar products available on the market to see what they could and couldn't offer to users. Finally, a few potential users  were surveyed to ensure the requirements meet users' expectations.
 \begin{longtable}[t]{| p{1cm} | p{6cm} | p{1.8cm} | p{2cm} | p{1.2cm} |}
 \hline
 ID & Requirements & Type & Category & Priority \\
@@ -323,7 +342,7 @@ RQ18 & The app shall allow only users to sort avalaible commentaries by commenta
 \hline
 \end{longtable}
 {\Large 3.2 Use Cases}\par
-The full list of use cases will be included in Appendix.\par
+A use case is a series of actions or events that describes interactions between actors (could be users, other systems etc.) and the system, to achieve an objective. Use cases are very useful for system design because they ensure the sytem's behaviours are consistent. Use cases can also be used in several stages of the development process like testing where use cases can be used to compare theoretical behaviours of the system against real-world behaviours. The full list of use cases will be included in the \textit{Appendix}.\par
 {\large 3.2.1 Use Case Diagram}\par
 \begin{figure}[H]
     \centering
@@ -331,11 +350,8 @@ The full list of use cases will be included in Appendix.\par
     \caption{Application Use Case Diagram}
     \label{fig:use-case-diagram}
 \end{figure}
-{\large 3.2.2 Use Case Titles}\par
-This is the list of use case titles for the application:\par
-\noindent Register\hfill RegisterToBeACommentator\\
-\noindent Searching\hfill RecordingCommentary\\
-\noindent ReviewCommentator\hfill StreamingCommentary\par
+A use case diagram is a graphical representation of use cases that gives an overview of all use cases and actors involved in the system.\par
+Figure \ref{fig:use-case-diagram} demonstrates the use case diagram of the application involving three different actors (users or other systems that interact with the subject) that are: Normal user, Commentator and Wowza Cloud. An arrow demonstrates that the actor being pointed to is the secondary actor (indirectly involved) in that particular use case. Likewise, undirected line depicts that the actor is the primary actor (directly involved in the process).\par
 {\Large 3.3 Entity-Relationship (ER) Diagram}\par
 ER diagrams are graphical representations of entities and their relationship within a system. An entity is an object or concept about which data is stored. A relationship describes how data is shared between two entities.  There are three types of relationships which differs in number of participants involved: one to one, one to many and many to one\textsuperscript{10}. The diagram below will show all the entities involved in the application.\par
 \begin{figure}[H]
@@ -344,16 +360,22 @@ ER diagrams are graphical representations of entities and their relationship wit
 	\caption{Application ER Diagram}
 	\label{fig:er-diagram}
 \end{figure}
+There are three entities involved in a system: \textit{User, Commentator} and \textit{Review}. Typicall, a user can either be a commentator or not and a commentator can have zero or more views.\par
+\newpage
 {\huge 4. Design and Implementation}\par
+This chapter will be describing the overall system architecture and discussing in details certain implementation decisions in comparison to alternatives. There will also be examples of good design practice that have been applied.\par
 {\Large 4.1 System Architecture}\par
-So just any other streaming applications, the system is divided into two main components, the back-end webserver and the Android application itself. The back-end webserver handles user-related functionalities that requires interactions with users' data. The Android application component is the front-end that provides graphical user interface (GUI) and links all the functionalities together to provide users a smooth experience.\par
-\autoref{fig:system-architecture} showcases the overall system. The \textbf{Server Side} is shown on the top of the diagram, it consists of only script files to interact with the database that contains all of users' information. The \textbf{Android Application} component is displayed on the bottom of the diagram that, it shows all of the main activities that are involved with the functionalities displayed in the diagram. The bottom row of each cell demonstrates dependencies and arrows represent the flow of execution of the application.\par
+Similar to other streaming applications, the system is divided into two main components, the back-end webserver and the Android application itself. The back-end webserver handles user-related functionalities that requires interactions with users' data. The Android application component is the front-end that provides graphical user interface (GUI) and links all the functionalities together to provide users a smooth experience.\par
+Figure \ref{fig:system-architecture} showcases the overall system. The \textbf{Server Side} is shown on the top of the diagram, it consists of only script files to interact with the database that contains all of users' information. The \textbf{Android Application} component is displayed on the bottom of the diagram that, it shows all of the main activities that are involved with the functionalities displayed in the diagram. The bottom row of each cell demonstrates dependencies and arrows represent the flow of execution of the application.\par
+For application part, All classes are quite self-explantory based on their names, not every class is included in the diagram. However, the complete list can be seen in the \textit{Appendix} which also includes the description for each of these activities. Most classes are dependent on server side scripts due to the nature of the application, storing these information in the application database will take up too much space unnecessarily since data are expired quickly so only immutable data such as \textit{user\_id, email} etc. are stored for identity purposes. \par
+The complete class listing for server side is also available in the \textit{Appendix}. The main purpose of the server is to provide a mean for application to interact with the database, class \textit{4} to \textit{10} all follow the same model, they encode data returned from database as JSON objects and cut out sensitive information (\textit{password} or \textit{salt} for example) and send that to the applcation. Each of these classes represents a REST call. class \textit{3} is a bit different, it contains all the functions other classes need in order to interact with the database.\par
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=13.5cm]{system-architecture}
 	\caption{System Architecture}
 	\label{fig:system-architecture}
 \end{figure}
+Lastly, Firebase Server enables live chat functionality, each time user enters the live chat room, \textit{ChatActivity} will fetch all past comments from this activity and continuallly update it when a new message is sent until the user leaves the chat room.\par
 {\Large 4.2 Data Flow Diagram}\par
 As the application aims to provide users streaming services, understanding of data flow and different components within the streaming cloud are also quite crucial when designing the system.\par
 \begin{figure}[H]
@@ -426,6 +448,7 @@ The application gives users ability to be able to search for commentators and vi
 	\item \textit{getCommentatorProfile()}: This method triggers when users press on any name being displayed, that sends a POST request to \textit{get\_commentator.php} to get relevevant information like rating, description etc. This could be also be performed when transitioned to profile activity instead but that would make the application seems sluggish having sending few POST requests (waiting for a response from server is the main issue here).
 \end{itemize}
 {\Large 4.4 Server Components}\par
+This section will be discussing in details certain aspects of the server side of the system.\par
 {\large 4.4.1 Server Database}\par
 {\textbf 4.4.1.1 Structure}\par
 Database normalisation has been performed to reduce data redundancy and improve data integrity to minimise potential errors occurs when inserting, updating or deleting data.\par
@@ -474,9 +497,11 @@ POST requests are the only way for the application to interact with server side,
 	\label{fig:load-comments}
 \end{figure}
 Figure \ref{fig:load-comments} shows an example from the load\-comments.php script. It works by checking whether the post request contain \textit{user\_id} field, if not it will set the \textit{error} field to true and return the error message as a json, the application is set to first check the \textit{error} value when receiving a feedback from the server and act accordingly. In other case, if \textit{user\_id} is set, then it will call the function \textit{loadComments()} from \textit{DB\_Functions()} class to send the SQL statement to the database and if it returns false that means no comments has been made about that commentator (it could also mean that the \textit{user\_id} is incorrect, however this function only triggers when an user views a commentator's profile so unlikely to happen) and returns all comments if found any. Like the previous response, it will set \textit{error} value accordingly to the results and return it as a json. All other functionalities like log in or registration follow the same layout structure and principles.\par
+\newpage
 {\huge Chapter 5: Testing}\par
+This chapter will be talking about different types of testing the system underwent and their results.\par
 {\Large 5.1 Stress Testing}\par
-The Monkey has been mentioned in \textit{section 2.3.5} and is the tool used for stress testing the application. The Monkey was repeated four times on different activities as transitions between activities are also a part of stream of events. Each run consists of 2000 pseudo-random events which adds up 8000 events in total. The full log will be recorded in a text file which will then be studied carefully for any error occurred duing the run (The Monkey can be set to ignore certain errors and continue running until the count it reached).\par
+The Monkey has been mentioned in \textit{section 2.3.5} and is the tool used for stress testing the application. The Monkey was repeated four times on different activities as transitions between activities are also a part of stream of events. Each run consists of 2000 pseudo-random events which adds up 8000 events in total, the results are available in the \textit{Appendix}. The full log will be recorded in a text file which will then be studied carefully for any error occurred duing the run (The Monkey can be set to ignore certain errors and continue running until the count it reached).\par
 Out of the four runs, two errors occurred, an interesting one found was a \textit{NullPointerException} on \textit{RegisterActivity}. This happened as a result of multiple requests sent to the server at once which rendered it unresponsive and when the application finally receive a  the application tries to parse the feedback from the server which was supposed to be a JSON object like the normal workflow. However, the server couldn't cope with this many requests at once (the server is hosted on \textit{000webhost} on a free account so performance is relatively bad), at one instance the server returned nothing hence the reason the error occurred, followed by many \textit{SocketTimeoutException} messages which means the request failed and that would follow a different workflow. In reality, this is highly unlikely to happen since the application will display a \textit{ProgressDialog} when waiting for a response from the server which means users won't be able to resubmit the query multiple times. As for the server side, in situations where request can reach the server, application will definitely receive a JSON response, so it was rather interesting to see the server returned nothing at all (even if request couldn't reach the server, application may not receive a JSON but some other response which will result in another error \textit{JSONException} that normally won't disrupt the workflow of application since it's handled).\par
 {\Large 5.2 Functional Testing}\par
 Test cases were devised from the list of MoSCoW requirements to ensure all the implemented functionalities are working flawlessly. In addition to that, some test cases also look at activity transitions to analyse application's behaviours. Overall, coverage was 100\% for all implemented requirements (RQ9 and RQ18 have not been implemented due to budget problems, Wowza Streaming Cloud only allows paid users to have access to REST API which can be used to dynamically control the cloud from other devices i.e. create channels, get all running channels etc.)\par
@@ -488,8 +513,39 @@ The application has been tested on a number of physical devices of different siz
 \textbf{Device}: Motorola Moto G\\
 \textbf{Android Version}: 5.1\par
 Testing against these devices kinda gives an idea how well the application copes with different sreen sizes and Android versions. As a result, the app performs normally on all three devices, except there was a problem with recording on the Note 4. Wowza GoCoder SDK doesn't seem to have a suitable profile set for Note 4, even when using \textit{AudioRecord}\textsuperscript{12} class manually without the intervention of GoCoder SDK. The application cycled through a list of standard sample rates from 8,000 Hz up to 96,000 Hz but still unable to find the correct profile, interesting thing is even camera view doesn't seem to be working. This doesn't seem to be related to the hardware side of things because native apps pre-installed on the device using camera and mic still work. There were a few suggestions leaning towards the new 6.0 Android version being more secured \url{http://stackoverflow.com/questions/27878458/android-audiorecord-troubles} and extra permissions needed to be supplied. However, this method still doesn't work, for the time being only other 2 devices are confirmed to be working with broadcasting functionality.\par
+\begin{longtable}{| l | l |}
+\hline
+Sample Rate	&  Sample Size (10 minutes)\\
+\hline
+8000 MONO &	4.68MB\\
+\hline
+16000 MONO &	9.24MB\\
+\hline
+22050 MONO & 13.06MB\\
+\hline
+32000 MONO &	17.60MB\\
+\hline
+44100 MONO &	25.40MB\\
+\hline
+48000 MONO &	27.20MB\\
+\hline
+8000 STEREO &	9.20MB\\
+\hline
+16000 STEREO & 18.60MB\\
+\hline
+22050 STEREO & 24.80MB\\
+\hline
+32000 STEREO & 37.40MB\\
+\hline
+44100 STEREO & 50.60MB\\
+\hline
+48000 STEREO & 55.60MB\\
+\hline
+\end{longtable}
+The table above shows the sample rate and channel configuration of the recording device and its corresponding size that has been performed as a part of an experiment to find the suitable configurations for broadcasting. The experiment was performed on the \textbf{Motorola Moto G}, the sample size represents raw audio data so this isn't necessarily how much data will be used in audio broadcasting. Also methodology for recording on STEREO was quite wrong, since data should be seperated and read pairwise (so [1],[2] to left channel, [3][4] to right channel etc.) so effectively they should be the same size for a given sample rate. Overall, 48000 Hz and 44100 Hz offer the most clear sound and the difference between them are unnoticeable, so in the end the application used 44100 Hz MONO as the default configuration (STEREO is not supported by some devices while MONO is guaranteed to work).\par
 {\Large 5.4 Summary}\par
 Overall, a wide range of tests have been performed both during and after development period which provides the confidence that the application has met its requirements. Over time, as functionalities grow, more and more tests can be added to the test suite that can keep all functionalities in check and make sure that newly implemented functionalities don't break the old code.\par
+\newpage
 {\huge Chapter 6: Conclusions and Evaluation}\par
 {\Large 6.1 Summary of Achievements}\par
 The project has managed to achieve its aims and goals set in section 1.4, more specifically:
@@ -513,8 +569,9 @@ There are quite a few things that can be improved massively in future developmen
 \end{itemize}
 {\Large 6.4 Conclusions}\par
 This has been an enjoyable experience, having the chance to learn many new things, interact with new technologies and expand my knowledge by tackling a complete new field of work. Firstly, this project has given me an opportunity to build on many things that I've learnt so far, for instance: Android development and actually gain more experience by building an actual application from scratch. Secondly, using third party SDKs (GoCoder SDK and JW Player SDK) extensively and integrate it into the final product. Furthermore, I have experienced PHP, a new type of programming language that I've never used before, this introduced me to a number of new ideas and style of coding. Finally, apart from technical skills, this has also helped to improve my time management and organisational skills by taking responsibilities for a project of this scale on my own with minimal help. Overall, even though there are few things that haven't been managed well and improvements to be made I'm still pretty pleased with the progress made during this period.\par
-{\huge 7. Appendices}\par
-{\Large 7.1 Use Cases}\par
+\newpage
+{\Large \textbf{Appendix A}}\par
+{\huge Use Cases}\par
 \begin{longtable}{ | l |}
 \hline
 \multicolumn{1}{|c|} {Use Case: Register}\\
@@ -1036,7 +1093,8 @@ Alternative Flows:\\
 None\\
 \hline
 \end{longtable}
-{\Large 7.2 System Overview / Class Listing}\par
+{\Large \textbf{Appendix B}}\par 
+{\huge System Overview / Class Listing}\par
 {\large 1. Applcation}\par
 \begin{longtable}[l]{|l|p{10cm}|}
 \hline
@@ -1103,7 +1161,8 @@ submit\_comment & submit a comment and rating about a commentator and returns a 
 user\_search & returns a list of commentators based on name and returns as a JSON object.\\
 \hline
 \end{longtable}
-{\Large 7.3 Testing Results}\par
+{\Large \textbf{Appendix C}}\par
+{\huge Testing Results}\par
 {\large 1. Monkey Stress Testing Results}\par
 Only runs that generated an error are mentioned.\par
 \begin{longtable}[l]{|p{1.2cm}|p{1cm}|p{2cm}|p{5cm}|p{5cm}|}
@@ -1132,7 +1191,8 @@ TC29 & Commentator without GPS turned on should be prompted with a pop up to tur
 TC32 & Searching functionality returns the correct search results & Activity returns correct results but not in a timely manner due to activity starting before results are returned so application will display \textit{No results} and actual results come in 2-3 seconds later depending on server's response time. & Added a \textit{ProgressDialog} so that actual results are displayed after application has received a response from the server.\\
 \hline
 \end{longtable}
-{\Large 7.4 System Manual}\par
+{\Large \textbf{Appendix D}}\par
+{\huge System Manual}\par
 {\large 1. Application}\par
 1. The source code for the application is located at: \url{https://github.com/Raizelb/Audio-Commentary.git}\\par
 2. Application source code is placed under the \textit{AudioCommentary} folder.\par
@@ -1142,7 +1202,8 @@ TC32 & Searching functionality returns the correct search results & Activity ret
 1. Server scripts are located under the same Github repository under folder named \textit{Web Scripts}.\par
 2. User will need to set up an SQL database, structure for tables are located under \textit{Web Scripts\\database}.\par
 3. Next, Config.php will need to be modifed to the suitable database user is using.\par
-{\Large 7.5 User Manual}\par
+{\Large \textbf{Appendix E}}\par
+{\huge User Manual}\par
 {\large 1. Register}\par
 \clearpage
 \begin{figure}[H]
@@ -1214,7 +1275,8 @@ To broadcast, commentator will first have to fill out the form, in this activity
 	\label{fig:chat}
 \end{figure}
 The chat room model is pretty simple, it shows only name of the sender, message content and time the message was sent. The big white circle is used to send message.\par
-{\Large 7.6 Project Plan and Interim Report}\par
+{\Large \textbf{Appendix F}}\par
+{\huge Project Plan and Interim Report}\par
 {\large 1. Project Plan}\par
 \end{flushleft}
 \newpage
@@ -1307,7 +1369,8 @@ Recently switched up the streaming cloud service from Azure Media Services to Wo
 Commentators’ profile is another requirement needs to be fulfilled. This is a relatively small task and should be finished in the upcoming week or at the latest in 2 weeks’ time.\par
 Sorting of search results based on commentators’ ratings is another requirement needs implemented.\par
 Also live chat is another requirement left to be done and will probably be the last thing on schedule to be finished.\par
-{\Large 7.7 Code Listing}\\
+{\Large \textbf{Appendix G}}\par
+{\huge Code Listing}\\
 {\large \textit{SearchableActivity.class}}
 \end{flushleft}
 \begin{landscape}
@@ -2384,7 +2447,8 @@ if (isset($_POST['user_id'])) {
 \end{lstlisting}
 \end{landscape}
 \begin{flushleft}
-{\Large 7.8 References}\par
+{\Large \textbf{Appendix H}}\par
+{\huge References}\par
 \textsuperscript{1}"Android Developers". Developer.android.com. N.p., 2007. Web. 15 Mar. 2017.\\
 \textsuperscript{2}Tamada, Ravi and Ravi Tamada. "Android Login And Registration With PHP, Mysql And Sqlite". androidhive. N.p., 2016. Web. 16 Mar. 2017.\\
 \textsuperscript{3}"Retrofit — Getting Started And Creating An Android Client". Futurestud.io. N.p., 2015. Web. 16 Mar. 2017.\\
