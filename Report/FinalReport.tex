@@ -1975,9 +1975,6 @@ public class MatchMakingActivity extends Activity {
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
 
-        // Create an adapter from the string array resource and use
-        // android's inbuilt layout file simple_spinner_item
-        // that represents the default spinner in the UI
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.premier_league, android.R.layout.simple_spinner_item);
         // Set the layout to use for each dropdown item
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
